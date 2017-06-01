@@ -1,0 +1,19 @@
+{
+  "name": "Resume - François Chalifour",
+  "author": "François Chalifour",
+	"compatibleVersion": 1,
+	"bundleVersion": 1,
+	"commands": [
+		{
+			"name": "Resume",
+			"identifier": "main",
+			"script": "./index.js"
+		}
+	],
+	"menu": {
+		"isRoot": true,
+		"items": [
+			"index"
+		]
+	}
+}

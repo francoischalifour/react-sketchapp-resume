@@ -1,0 +1,46 @@
+{
+  "name": "react-sketchapp-resume",
+  "version": "1.0.0",
+  "main": "react-sketchapp-resume.sketchplugin",
+  "manifest": "src/manifest.json",
+  "author": {
+    "name": "Francois Chalifour",
+    "email": "francois.chalifour@gmail.com",
+    "url": "http://francoischalifour.com"
+  },
+  "license": "MIT",
+  "scripts": {
+    "start": "concurrently \"npm run serve\" \"skpm build --watch --run\"",
+    "serve": "serve images --ignore CREDITS.md -n --port 5000 --silent",
+    "build": "skpm build",
+    "watch": "skpm build --watch",
+    "render": "skpm build --watch --run",
+    "render:mock": "./scripts/config.sh env mock && skpm build --watch --run",
+    "render:production": "./scripts/config.sh env production && skpm build --watch --run",
+    "render:en": "./scripts/config.sh lang en && skpm build --watch --run",
+    "render:fr": "./scripts/config.sh lang fr && skpm build --watch --run",
+    "render:once": "skpm build --run",
+    "link-plugin": "skpm link",
+    "lint": "standard",
+    "lint:fix": "standard --fix"
+  },
+  "standard": {
+    "ignore": [
+      "*.sketchplugin"
+    ]
+  },
+  "devDependencies": {
+    "concurrently": "^3.4.0",
+    "prop-types": "^15.5.10",
+    "serve": "^5.1.5",
+    "skpm": "^0.9.10",
+    "standard": "^10.0.2"
+  },
+  "dependencies": {
+    "react": "^15.5.4",
+    "react-sketchapp": "^0.10.3",
+    "react-test-renderer": "^15.5.4",
+    "sketch-module-fetch-polyfill": "^0.1.4",
+    "traverse": "^0.6.6"
+  }
+}
