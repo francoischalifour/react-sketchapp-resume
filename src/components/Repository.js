@@ -49,13 +49,13 @@ const Repository = ({
         <Dot width={20} borderColor={language.color} filled /> {language.name}
       </Text>
 
-      <Text name='Stargazers' style={[typography.Body, styles.infoItem]}>
+      {noStargazers > 0 && <Text name='Stargazers' style={[typography.Body, styles.infoItem]}>
         {`⭑ ${noStargazers}`}
-      </Text>
+      </Text>}
 
-      <Text name='Forks' style={[typography.Body, styles.infoItem]}>
+      {noForks > 0 && <Text name='Forks' style={[typography.Body, styles.infoItem]}>
         {`⑂ ${noForks}`}
-      </Text>
+      </Text>}
     </View>
   </View>
 )
