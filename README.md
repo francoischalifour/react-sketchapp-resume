@@ -26,7 +26,7 @@ By default, the resume is in `mock` environment (doesn't pull real data from Git
 #### Production environment
 
 * [Create an OAuth token](https://developer.github.com/early-access/graphql/guides/accessing-graphql) to get access to the GitHub GraphQL API (only `public_repo` scope is required)
-* Add your newly generated token in [`config/.config.github.js`](config/index.js)
+* Add your newly generated token in [`config/.config.github.js`](config/.config.github.js)
 * Change the environment config variable in [`config/.config.env.js`](config/.config.env.js) to anything but `mock`
 
 ## Features
