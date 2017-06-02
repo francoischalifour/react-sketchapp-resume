@@ -2,7 +2,7 @@
 
 > ⚛️ 💎 My resume built with [React](https://facebook.github.io/react) and rendered to [Sketch](https://www.sketchapp.com/) using [`react-sketchapp`](https://github.com/airbnb/react-sketchapp).
 
-![Screenshot](https://cloud.githubusercontent.com/assets/6137112/26603036/57ae0832-457d-11e7-9b6b-2dc030044f42.png)
+![Screenshot](https://cloud.githubusercontent.com/assets/6137112/26737756/696019a6-47c3-11e7-8fe5-083948b6fc6b.png)
 
 *Requirements: [Sketch 43+](https://www.sketchapp.com/), [Raleway font family](https://fonts.google.com/specimen/Raleway).*
 
