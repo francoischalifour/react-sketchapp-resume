@@ -2,6 +2,7 @@ import React from 'react'
 import { array } from 'prop-types'
 import { Artboard, View, StyleSheet } from 'react-sketchapp'
 import { dimensions, spacing, colors } from '../designSystem'
+import { Space } from '../components'
 import Header from './Header'
 import Footer from './Footer'
 import GitHub from './GitHub'
@@ -9,7 +10,6 @@ import Education from './Education'
 import Experience from './Experience'
 import Techs from './Techs'
 import Hobbies from './Hobbies'
-import Space from '../components/Space'
 
 const styles = StyleSheet.create({
   artboard: {

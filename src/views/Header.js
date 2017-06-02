@@ -1,9 +1,9 @@
 import React from 'react'
 import { Text, View, Image, StyleSheet } from 'react-sketchapp'
-import { typography, spacing, colors } from '../designSystem'
-import { getDataLocale, getAge } from '../utils'
 import { IMAGE_SERVER_URL, IMAGE_SERVER_PORT } from '../../config'
 import about from '../../data/about'
+import { getDataLocale, getAge } from '../utils'
+import { typography, spacing, colors } from '../designSystem'
 
 const IMG_ENDPOINT = `${IMAGE_SERVER_URL}:${IMAGE_SERVER_PORT}/`
 

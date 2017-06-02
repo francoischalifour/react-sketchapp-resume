@@ -1,11 +1,10 @@
 import React from 'react'
 import { View } from 'react-sketchapp'
-import { getDataLocale } from '../utils'
 import { IMAGE_SERVER_URL, IMAGE_SERVER_PORT } from '../../config'
 import { hobbies as hobbiesHeading } from '../../data/headings'
 import hobbies from '../../data/hobbies'
-import Heading from '../components/Heading'
-import Hobby from '../components/Hobby'
+import { getDataLocale } from '../utils'
+import { Heading, Hobby } from '../components'
 
 const IMG_ENDPOINT = `${IMAGE_SERVER_URL}:${IMAGE_SERVER_PORT}/`
 const heading = getDataLocale(hobbiesHeading)

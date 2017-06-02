@@ -1,7 +1,7 @@
 import React from 'react'
 import { Text, View, StyleSheet } from 'react-sketchapp'
-import { dimensions, typography, spacing, colors } from '../designSystem'
 import { website } from '../../data/about'
+import { dimensions, typography, spacing, colors } from '../designSystem'
 
 const styles = StyleSheet.create({
   container: {

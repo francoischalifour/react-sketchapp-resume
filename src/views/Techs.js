@@ -1,10 +1,9 @@
 import React from 'react'
 import { View } from 'react-sketchapp'
-import { getDataLocale } from '../utils'
 import { techs as techHeading } from '../../data/headings'
 import techData from '../../data/techs'
-import Heading from '../components/Heading'
-import Tech from '../components/Tech'
+import { getDataLocale } from '../utils'
+import { Heading, Tech } from '../components'
 
 const heading = getDataLocale(techHeading)
 const techList = getDataLocale(techData)

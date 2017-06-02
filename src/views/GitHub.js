@@ -1,12 +1,10 @@
 import React from 'react'
 import { array } from 'prop-types'
 import { Text, View } from 'react-sketchapp'
-import { typography, colors } from '../designSystem'
-import { getDataLocale } from '../utils'
 import { github as githubHeading } from '../../data/headings'
-import Heading from '../components/Heading'
-import Repository from '../components/Repository'
-import Code from '../components/Code'
+import { getDataLocale } from '../utils'
+import { typography, colors } from '../designSystem'
+import { Heading, Repository, Code } from '../components'
 
 const heading = getDataLocale(githubHeading)
 

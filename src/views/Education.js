@@ -1,11 +1,10 @@
 import React from 'react'
 import { View } from 'react-sketchapp'
 import { MAX_TIMELINE_ITEMS } from '../../config'
-import { getDataLocale, formatDateInterval, sortByDate } from '../utils'
 import { education as educationHeading } from '../../data/headings'
 import educationData from '../../data/education'
-import Heading from '../components/Heading'
-import Event from '../components/Event'
+import { getDataLocale, formatDateInterval, sortByDate } from '../utils'
+import { Heading, Event } from '../components'
 
 const heading = getDataLocale(educationHeading)
 const educationList = getDataLocale(educationData)

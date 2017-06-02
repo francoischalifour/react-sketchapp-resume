@@ -2,7 +2,7 @@ import React from 'react'
 import { string, number, shape } from 'prop-types'
 import { Text, View, StyleSheet } from 'react-sketchapp'
 import { spacing, typography, colors } from '../designSystem'
-import Dot from '../components/Dot'
+import Dot from './Dot'
 
 const styles = StyleSheet.create({
   repo: {
