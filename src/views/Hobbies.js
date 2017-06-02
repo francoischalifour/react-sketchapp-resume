@@ -23,7 +23,7 @@ const Hobbies = () => (
     <Heading title={heading} />
 
     <View style={style}>
-      {hobbyList.sort().map((hobby, index) =>
+      {hobbyList.map((hobby, index) =>
         <Hobby
           key={index}
           name={hobby.name}
