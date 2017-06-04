@@ -1,19 +1,23 @@
 {
-  "name": "Resume - François Chalifour",
+  "name": "⚛️ Resume",
   "author": "François Chalifour",
-	"compatibleVersion": 1,
+  "homepage": "https://github.com/francoischalifour/react-sketchapp-resume",
+  "version": "0.1.0",
+  "identifier": "com.github.francoischalifour.react-sketchapp-resume",
+  "updateURL": "https://github.com/francoischalifour/react-sketchapp-resume",
+	"compatibleVersion": 3,
 	"bundleVersion": 1,
 	"commands": [
 		{
-			"name": "Resume",
-			"identifier": "main",
+			"name": "Generate",
+			"identifier": "generate",
 			"script": "./index.js"
 		}
 	],
 	"menu": {
-		"isRoot": true,
-		"items": [
-			"index"
-		]
+    "title": "⚛️ Resume - François Chalifour",
+    "items": [
+      "generate"
+    ]
 	}
 }
