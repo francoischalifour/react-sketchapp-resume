@@ -30,16 +30,16 @@
     ]
   },
   "devDependencies": {
-    "concurrently": "^3.4.0",
+    "concurrently": "^3.5.0",
     "prop-types": "^15.5.10",
-    "serve": "^5.1.5",
+    "serve": "^6.0.6",
     "skpm": "^0.9.10",
-    "standard": "^10.0.2"
+    "standard": "^10.0.3"
   },
   "dependencies": {
-    "react": "^15.5.4",
-    "react-sketchapp": "^0.10.3",
-    "react-test-renderer": "^15.5.4",
+    "react": "^15.6.1",
+    "react-sketchapp": "^0.12.1",
+    "react-test-renderer": "^15.6.1",
     "sketch-module-fetch-polyfill": "^0.1.4",
     "traverse": "^0.6.6"
   }
