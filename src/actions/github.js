@@ -1,9 +1,8 @@
 import fetch from 'sketch-module-fetch-polyfill'
-import { GITHUB_TOKEN, MAX_GITHUB_REPOS, __ENV__ } from '../../config'
+import { __ENV__, GITHUB_TOKEN, MAX_GITHUB_REPOS, GITHUB_ENDPOINT } from '../../config'
 import { social } from '../../data/about'
 
 const { github: username } = social
-const ENDPOINT = 'https://api.github.com/graphql'
 
 const QUERY = `query ($login: String = "${username}", $first: Int = ${MAX_GITHUB_REPOS}) {
   repositoryOwner(login: $login) {
