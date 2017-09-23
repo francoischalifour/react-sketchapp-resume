@@ -1,14 +1,16 @@
 {
   "name": "react-sketchapp-resume",
   "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "repository": "francoischalifour/react-sketchapp-resume",
   "main": "react-sketchapp-resume.sketchplugin",
   "manifest": "src/manifest.json",
   "author": {
-    "name": "Francois Chalifour",
+    "name": "François Chalifour",
     "email": "francois.chalifour@gmail.com",
-    "url": "http://francoischalifour.com"
+    "url": "https://francoischalifour.com"
   },
-  "license": "MIT",
   "scripts": {
     "start": "concurrently \"npm run serve\" \"skpm build --watch --run\"",
     "serve": "serve images --ignore CREDITS.md -n --port 5000 --silent",
@@ -22,25 +24,31 @@
     "render:once": "skpm build --run",
     "link-plugin": "skpm link",
     "lint": "standard",
-    "lint:fix": "standard --fix"
+    "lint:fix": "standard --fix",
+    "github:fetch": "node ./scripts/fetch-github > ./data/mocks/github.json",
+    "pdf:metadata": "node ./scripts/add-pdf-metadata"
   },
   "standard": {
     "ignore": [
       "*.sketchplugin"
     ]
   },
-  "devDependencies": {
-    "concurrently": "^3.4.0",
-    "prop-types": "^15.5.10",
-    "serve": "^5.1.5",
-    "skpm": "^0.9.10",
-    "standard": "^10.0.2"
-  },
   "dependencies": {
-    "react": "^15.5.4",
-    "react-sketchapp": "^0.10.3",
-    "react-test-renderer": "^15.5.4",
+    "react": "^15.6.1",
+    "react-sketchapp": "^0.12.1",
+    "react-test-renderer": "^15.6.1",
     "sketch-module-fetch-polyfill": "^0.1.4",
     "traverse": "^0.6.6"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.0",
+    "dist-exiftool": "^10.53.0",
+    "dotenv": "^4.0.0",
+    "node-exiftool": "^2.3.0",
+    "node-fetch": "^1.7.3",
+    "prop-types": "^15.5.10",
+    "serve": "^6.1.0",
+    "skpm": "^0.9.10",
+    "standard": "^10.0.3"
   }
 }

@@ -9,7 +9,7 @@ export default {
     en: 'years old',
     fr: 'ans'
   },
-  location: 'Cambridge, UK',
+  location: 'Québec, Canada',
   phone: '+33 6 86 11 71 74',
   email: 'francois.chalifour@gmail.com',
   website: 'francoischalifour.com',
