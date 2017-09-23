@@ -13,16 +13,14 @@ const Shape = ({
   backgroundColor,
   filled
 }) => (
-  <View name={name} style={[{
+  <View name={name} style={{
     width,
     height,
     borderRadius,
     borderWidth,
     borderColor,
-    backgroundColor
-  }, filled && {
-    backgroundColor: borderColor
-  }]} />
+    backgroundColor: filled ? borderColor : backgroundColor
+  }} />
 )
 
 Shape.propTypes = {
