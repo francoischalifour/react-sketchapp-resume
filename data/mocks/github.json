@@ -1,0 +1,74 @@
+{
+  "data": {
+    "repositoryOwner": {
+      "pinnedRepositories": {
+        "edges": [
+          {
+            "node": {
+              "name": "medium-zoom",
+              "description": "🔎🖼 Medium zoom on your pictures in vanilla JavaScript",
+              "primaryLanguage": {
+                "name": "JavaScript",
+                "color": "#f1e05a"
+              },
+              "stargazers": {
+                "totalCount": 92
+              },
+              "forks": {
+                "totalCount": 10
+              }
+            }
+          },
+          {
+            "node": {
+              "name": "react-sketchapp-resume",
+              "description": "⚛️ 💎 My resume built with React and rendered to Sketch",
+              "primaryLanguage": {
+                "name": "JavaScript",
+                "color": "#f1e05a"
+              },
+              "stargazers": {
+                "totalCount": 16
+              },
+              "forks": {
+                "totalCount": 0
+              }
+            }
+          },
+          {
+            "node": {
+              "name": "musicscore-creator",
+              "description": "🎼 Musical web app for editing, visualizing and transposing music sheets",
+              "primaryLanguage": {
+                "name": "JavaScript",
+                "color": "#f1e05a"
+              },
+              "stargazers": {
+                "totalCount": 6
+              },
+              "forks": {
+                "totalCount": 1
+              }
+            }
+          },
+          {
+            "node": {
+              "name": "todo-cli",
+              "description": "✅ Command-line tool to manage Todo lists",
+              "primaryLanguage": {
+                "name": "Python",
+                "color": "#3572A5"
+              },
+              "stargazers": {
+                "totalCount": 6
+              },
+              "forks": {
+                "totalCount": 0
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -31,27 +31,25 @@ const QUERY = `query ($login: String = "${username}", $first: Int = ${MAX_GITHUB
 }`
 
 const getRepos = () => {
-  if (__ENV__ === 'mock') {
-    return Promise.resolve(require('../../data/mocks').githubRepos)
-  }
-
-  return fetch(ENDPOINT, {
-    method: 'POST',
-    body: {
-      query: QUERY.replace(/(\s\n)/g, '')
-    },
-    headers: {
-      'Authorization': `Bearer ${GITHUB_TOKEN}`,
-      'Content-Type': 'application/json'
-    }
-  })
-  .then(res => res.json())
-  .then(json => json.data)
-  .then(data => data.repositoryOwner)
-  .then(owner => owner.pinnedRepositories)
-  .then(repos => repos.edges)
-  .then(edges => edges.map(e => e.node))
-  .catch(err => err.message)
+  return (__ENV__ === 'mock'
+    ? Promise.resolve(require('../../data/mocks/github.json'))
+    : fetch(GITHUB_ENDPOINT, {
+      method: 'POST',
+      body: {
+        query: QUERY.replace(/(\s\n)/g, '')
+      },
+      headers: {
+        'Authorization': `Bearer ${GITHUB_TOKEN}`,
+        'Content-Type': 'application/json'
+      }
+      .then(res => res.json())
+    }))
+      .then(json => json.data)
+      .then(data => data.repositoryOwner)
+      .then(owner => owner.pinnedRepositories)
+      .then(repos => repos.edges)
+      .then(edges => edges.map(e => e.node))
+      .catch(err => err.message)
 }
 
 export default {
