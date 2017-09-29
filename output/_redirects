@@ -1,4 +1,4 @@
-/en /resume.en.pdf
-/fr /resume.fr.pdf
+/en /resume.en.pdf 200
+/fr /resume.fr.pdf 200
 /about https://github.com/francoischalifour/react-sketchapp-resume
-/* /resume.en.pdf
+/* /en 200
