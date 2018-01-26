@@ -1,6 +1,6 @@
 import React from 'react'
 import { array } from 'prop-types'
-import { Artboard, View, StyleSheet } from 'react-sketchapp'
+import { Artboard, View } from 'react-sketchapp'
 import { dimensions, spacing, colors } from '../designSystem'
 import Space from '../components/Space'
 import Header from './Header'

@@ -1,6 +1,6 @@
 import React from 'react'
 import { string } from 'prop-types'
-import { View, Text, Image, StyleSheet } from 'react-sketchapp'
+import { View, Text, Image } from 'react-sketchapp'
 import { typography, spacing } from '../designSystem'
 
 const styles = {

@@ -18,7 +18,9 @@ const GitHub = ({ repos }) => (
       {!Array.isArray(repos)
         ? <Code type='error'>{repos}</Code>
         : repos.length === 0
-          ? <Text style={{...typography.Body, color: colors.DarkGray }}>No pinned repositories.</Text>
+          ? <Text style={{
+            ...typography.Body, color: colors.DarkGray
+          }}>No pinned repositories.</Text>
           : repos.map((repo, index) => (
             <Repository
               key={index}

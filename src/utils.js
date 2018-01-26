@@ -1,7 +1,7 @@
 import config from '../config'
 const { __LANG__ } = config
 
-function traverseHelper(data, language) {
+function traverseHelper (data, language) {
   if (typeof data !== 'object') {
     return data
   }

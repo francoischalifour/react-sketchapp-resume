@@ -1,6 +1,6 @@
 import React from 'react'
 import { string, array, bool } from 'prop-types'
-import { Text, View, StyleSheet } from 'react-sketchapp'
+import { Text, View } from 'react-sketchapp'
 import { spacing, typography, colors } from '../designSystem'
 import VerticalLine from './VerticalLine'
 import Dot from './Dot'

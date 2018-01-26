@@ -40,6 +40,7 @@
     "sketch-module-fetch-polyfill": "^0.1.4"
   },
   "devDependencies": {
+    "@skpm/builder": "^0.3.1",
     "concurrently": "^3.5.0",
     "dist-exiftool": "^10.53.0",
     "dotenv": "^4.0.0",
@@ -47,7 +48,6 @@
     "node-fetch": "^1.7.3",
     "prop-types": "^15.5.10",
     "serve": "^6.1.0",
-    "@skpm/builder": "^0.3.1",
     "standard": "^10.0.3"
   }
 }
