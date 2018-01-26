@@ -1,9 +1,9 @@
 import React from 'react'
 import { Text, View, StyleSheet } from 'react-sketchapp'
-import { website } from '../../data/about'
+import about from '../../data/about'
 import { dimensions, typography, spacing, colors } from '../designSystem'
 
-const styles = StyleSheet.create({
+const styles = {
   container: {
     position: 'absolute',
     bottom: 0,
@@ -17,11 +17,9 @@ const styles = StyleSheet.create({
     backgroundColor: colors.Primary
   },
   info: {
-    ...typography.Lead,
     lineHeight: 20,
     paddingVertical: spacing.xSmall * 1.5,
     paddingHorizontal: spacing.Small,
-    color: colors.Primary,
     backgroundColor: colors.White,
     borderRadius: 100,
     shadowColor: 'rgba(0,0,0,.50)',
@@ -31,13 +29,18 @@ const styles = StyleSheet.create({
       height: 4
     }
   }
-})
+}
 
 const Footer = () => (
   <View name='Footer' style={styles.container}>
-    <Text style={styles.info}>
-      {website}
+    <View style={styles.info}>
+    <Text style={{
+      ...typography.Lead,
+      color: colors.Primary
+    }}>
+      {about.website}
     </Text>
+    </View>
   </View>
 )
 

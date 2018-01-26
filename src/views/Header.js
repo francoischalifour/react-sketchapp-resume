@@ -1,13 +1,13 @@
 import React from 'react'
 import { Text, View, Image, StyleSheet } from 'react-sketchapp'
-import { IMAGE_SERVER_URL, IMAGE_SERVER_PORT } from '../../config'
+import config from '../../config'
 import about from '../../data/about'
 import { getDataLocale, getAge } from '../utils'
 import { typography, spacing, colors } from '../designSystem'
 
-const IMG_ENDPOINT = `${IMAGE_SERVER_URL}:${IMAGE_SERVER_PORT}/`
+const IMG_ENDPOINT = `${config.IMAGE_SERVER_URL}:${config.IMAGE_SERVER_PORT}/`
 
-const styles = StyleSheet.create({
+const styles = {
   container: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     height: 24,
     marginRight: 12
   }
-})
+}
 
 const {
   name,
@@ -79,7 +79,7 @@ const Header = () => (
 
     <View name='Right Panel' style={styles.right}>
       {[age, location, phone, email].map((text, index) =>
-        <Text key={index} style={styles.info}>{text}</Text>
+        <Text key={index} style={styles.info}>{text+''}</Text>
       )}
 
       <View style={styles.title} />

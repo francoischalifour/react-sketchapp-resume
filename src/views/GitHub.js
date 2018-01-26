@@ -1,22 +1,24 @@
 import React from 'react'
 import { array } from 'prop-types'
 import { Text, View } from 'react-sketchapp'
-import { github as githubHeading } from '../../data/headings'
+import headings from '../../data/headings'
 import { getDataLocale } from '../utils'
 import { typography, colors } from '../designSystem'
-import { Heading, Repository, Code } from '../components'
+import Heading from '../components/Heading'
+import Repository from '../components/Repository'
+import Code from '../components/Code'
 
-const heading = getDataLocale(githubHeading)
+const heading = getDataLocale(headings.github)
 
 const GitHub = ({ repos }) => (
-  <View name='GitHub' style={{ flex: 1 }}>
+  <View name='GitHub'>
     <Heading title={heading} />
 
     <View name='Repositories'>
       {!Array.isArray(repos)
         ? <Code type='error'>{repos}</Code>
         : repos.length === 0
-          ? <Text style={[typography.Body, { color: colors.DarkGray }]}>No pinned repositories.</Text>
+          ? <Text style={{...typography.Body, color: colors.DarkGray }}>No pinned repositories.</Text>
           : repos.map((repo, index) => (
             <Repository
               key={index}

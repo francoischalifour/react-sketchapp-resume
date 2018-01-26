@@ -1,4 +1,4 @@
-const colors = {
+export const colors = {
   White: '#fff',
   Black: '#000',
   LightBlue: '#f1f8ff',
@@ -12,12 +12,12 @@ const colors = {
   Error: '#F44336'
 }
 
-const dimensions = {
+export const dimensions = {
   docWidth: 1654,
   docHeight: 2339
 }
 
-const spacing = {
+export const spacing = {
   xSmall: 4 * 4,
   Small: 8 * 4,
   Medium: 16 * 4,
@@ -25,7 +25,7 @@ const spacing = {
   xLarge: 64 * 4
 }
 
-const typography = {
+export const typography = {
   Title: {
     color: '#fff',
     fontSize: 64,

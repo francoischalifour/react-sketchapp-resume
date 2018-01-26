@@ -4,7 +4,7 @@ import { Text, View, StyleSheet } from 'react-sketchapp'
 import { spacing, typography, colors } from '../designSystem'
 import Dot from './Dot'
 
-const styles = StyleSheet.create({
+const styles = {
   repo: {
     width: 640,
     marginBottom: 24,
@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     paddingRight: spacing.Small,
     color: colors.DarkGray
   }
-})
+}
 
 const Repository = ({
   name,
@@ -40,20 +40,20 @@ const Repository = ({
       {name}
     </Text>
 
-    <Text name='Description' style={[typography.Body, styles.description]}>
+    <Text name='Description' style={{...typography.Body, ...styles.description}}>
       {description}
     </Text>
 
     <View name='Info' style={styles.info}>
-      <Text name='Language' style={[typography.Body, styles.infoItem]}>
+      <Text name='Language' style={{...typography.Body, ...styles.infoItem}}>
         <Dot width={20} borderColor={language.color} filled /> {language.name}
       </Text>
 
-      {noStargazers > 0 && <Text name='Stargazers' style={[typography.Body, styles.infoItem]}>
+      {noStargazers > 0 && <Text name='Stargazers' style={{...typography.Body, ...styles.infoItem}}>
         {`⭑ ${noStargazers}`}
       </Text>}
 
-      {noForks > 0 && <Text name='Forks' style={[typography.Body, styles.infoItem]}>
+      {noForks > 0 && <Text name='Forks' style={{...typography.Body, ...styles.infoItem}}>
         {`⑂ ${noForks}`}
       </Text>}
     </View>

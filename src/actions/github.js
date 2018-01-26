@@ -1,9 +1,8 @@
 import fetch from 'sketch-module-fetch-polyfill'
-import { __ENV__, GITHUB_TOKEN, MAX_GITHUB_REPOS, GITHUB_ENDPOINT } from '../../config'
-import { social } from '../../data/about'
-
-const { github: username } = social
-
+import config from '../../config'
+import about from '../../data/about'
+const { github: username } = about.social
+const { __ENV__, GITHUB_TOKEN, MAX_GITHUB_REPOS, GITHUB_ENDPOINT } = config
 const QUERY = `query ($login: String = "${username}", $first: Int = ${MAX_GITHUB_REPOS}) {
   repositoryOwner(login: $login) {
     ... on User {
@@ -29,7 +28,7 @@ const QUERY = `query ($login: String = "${username}", $first: Int = ${MAX_GITHUB
   }
 }`
 
-const getRepos = () => {
+export const getRepos = () => {
   return (__ENV__ === 'mock'
     ? Promise.resolve(require('../../data/mocks/github.json'))
     : fetch(GITHUB_ENDPOINT, {
@@ -49,8 +48,4 @@ const getRepos = () => {
       .then(repos => repos.edges)
       .then(edges => edges.map(e => e.node))
       .catch(err => err.message)
-}
-
-export default {
-  getRepos
 }

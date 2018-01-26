@@ -1,13 +1,13 @@
 import React from 'react'
 import { View } from 'react-sketchapp'
-import { IMAGE_SERVER_URL, IMAGE_SERVER_PORT } from '../../config'
-import { hobbies as hobbiesHeading } from '../../data/headings'
+import config from '../../config'
+import headings from '../../data/headings'
 import hobbies from '../../data/hobbies'
 import { getDataLocale } from '../utils'
-import { Heading, Hobby } from '../components'
-
-const IMG_ENDPOINT = `${IMAGE_SERVER_URL}:${IMAGE_SERVER_PORT}/`
-const heading = getDataLocale(hobbiesHeading)
+import Heading from '../components/Heading'
+import Hobby from '../components/Hobby'
+const IMG_ENDPOINT = `${config.IMAGE_SERVER_URL}:${config.IMAGE_SERVER_PORT}/`
+const heading = getDataLocale(headings.hobbies)
 const hobbyList = getDataLocale(hobbies)
 
 const style = {
@@ -18,7 +18,7 @@ const style = {
 }
 
 const Hobbies = () => (
-  <View name='Hobbies' style={{ flex: 1 }}>
+  <View name='Hobbies'>
     <Heading title={heading} />
 
     <View style={style}>

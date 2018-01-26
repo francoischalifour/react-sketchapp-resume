@@ -3,7 +3,7 @@ import { string } from 'prop-types'
 import { View, Text, Image, StyleSheet } from 'react-sketchapp'
 import { typography, spacing } from '../designSystem'
 
-const styles = StyleSheet.create({
+const styles = {
   hobby: {
     justifyContent: 'center',
     marginBottom: spacing.Small,
@@ -15,10 +15,10 @@ const styles = StyleSheet.create({
     height: 100
   },
   name: {
-    paddingTop: spacing.xSmall,
+    marginTop: spacing.xSmall,
     textAlign: 'center'
   }
-})
+}
 
 const Hobby = ({ name, image }) => (
   <View name={name} style={styles.hobby}>
@@ -27,7 +27,7 @@ const Hobby = ({ name, image }) => (
       style={styles.image}
     />
 
-    <Text style={[typography.Lead, styles.name]}>
+    <Text style={{...typography.Lead, ...styles.name}}>
       {name}
     </Text>
   </View>

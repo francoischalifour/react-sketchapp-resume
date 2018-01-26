@@ -1,6 +1,6 @@
 import React from 'react'
 import { string } from 'prop-types'
-import { Text } from 'react-sketchapp'
+import { Text, View } from 'react-sketchapp'
 import { typography, spacing, colors } from '../designSystem'
 
 const style = {
@@ -8,15 +8,17 @@ const style = {
   marginRight: 16,
   marginBottom: 16,
   paddingVertical: 12,
-  color: colors.PrimaryLight,
+
   backgroundColor: colors.LightBlue,
   borderRadius: 3
 }
 
 const Tech = ({ name }) => (
-  <Text style={[typography.Body, style]}>
-    {name.toLowerCase()}
-  </Text>
+  <View style={style}>
+    <Text style={{color: colors.PrimaryLight, ...typography.Body}}>
+      {name.toLowerCase()}
+    </Text>
+  </View>
 )
 
 Tech.propTypes = {

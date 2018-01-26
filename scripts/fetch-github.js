@@ -31,7 +31,7 @@ const query = `query ($login: String!, $first: Int!) {
 
 const variables = {
   login: GITHUB_USERNAME,
-  first: GITHUB_MAX_REPOS
+  first: Number(GITHUB_MAX_REPOS)
 }
 
 fetch(GITHUB_ENDPOINT, {
