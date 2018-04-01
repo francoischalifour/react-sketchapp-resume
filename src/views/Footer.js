@@ -8,7 +8,7 @@ const styles = {
     position: 'absolute',
     bottom: 0,
     width: dimensions.docWidth,
-    height: 200,
+    height: 160,
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
@@ -42,25 +42,25 @@ const Footer = () => (
         {about.website}
       </Text>
     </View>
+
     <Svg
-      xmlns='http://www.w3.org/2000/svg'
       width={dimensions.docWidth}
-      height='240'
-      viewBox={`0 0 1 240`}
+      height={200}
+      viewBox={`0 0 1 200`}
       style={{
         position: 'absolute',
         bottom: 0
       }}
       >
       <Svg.Defs>
-        <Svg.LinearGradient id='grad1' x1='0%' y1='0%' x2='100%' y2='0%'>
-          <Svg.Stop offset='0%' style='stop-color:#030F4E;stop-opacity:1' />
-          <Svg.Stop offset='100%' style='stop-color:#28ABD4;stop-opacity:1' />
+        <Svg.LinearGradient id='gradient'>
+          <Svg.Stop offset='0%' style={`stop-color: ${colors.PrimaryDark};`} />
+          <Svg.Stop offset='100%' style={`stop-color: ${colors.PrimaryLight};`} />
         </Svg.LinearGradient>
       </Svg.Defs>
-      <Svg.G fill='none' fillRule='evenodd'>
+      <Svg.G>
         <Svg.Path
-          fill={'url(#grad1)' || colors.Primary}
+          fill={'url(#gradient)' || colors.Primary}
           d={`M0 40 L0 220 1 220 1 0 0 40`}
         />
       </Svg.G>
