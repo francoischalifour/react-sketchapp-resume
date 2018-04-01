@@ -7,7 +7,7 @@ const exiftoolBin = require('dist-exiftool')
 const { name: library, version, repository, author } = require('../package')
 const { name = '' } = author
 const LANGUAGES = ['en', 'fr']
-const OUTPUT_PATH = './output'
+const OUTPUT_PATH = './build'
 // Exif date format is YYYY:mm:dd HH:MM:SS
 const date = new Date()
   .toISOString()
