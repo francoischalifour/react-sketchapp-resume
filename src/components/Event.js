@@ -1,6 +1,6 @@
 import React from 'react'
 import { string, array, bool } from 'prop-types'
-import { Text, View } from 'react-sketchapp'
+import { Text, View, Svg } from 'react-sketchapp'
 import { spacing, typography, colors } from '../designSystem'
 import VerticalLine from './VerticalLine'
 import Dot from './Dot'
@@ -44,11 +44,36 @@ const Event = ({
         borderColor={colors.LightGray}
         filled={done}
       />
-      <VerticalLine
-        height={4}
-        width={3}
-        borderStyle={isLast ? 'dotted' : 'solid'}
-      />
+      {isLast ? (
+        <View style={{flex: 4, width: 3}}>
+          <Svg
+            width={3}
+            style={{
+              position: 'absolute',
+              height: '100%',
+              top: 0
+            }}
+          >
+            <Svg.Defs>
+              <Svg.LinearGradient id='gradient' x1='100%' y1='0%' x2='100%' y2='100%'>
+                <Svg.Stop offset='0%' style={`stop-color: ${colors.LightGray};`} />
+                <Svg.Stop offset='100%' style={`stop-color: #fff;`} />
+              </Svg.LinearGradient>
+            </Svg.Defs>
+            <Svg.G>
+              <Svg.Path
+                fill={'url(#gradient)'}
+                d={`M0 0 L0 480 1 480 1 0 0 0`}
+              />
+            </Svg.G>
+          </Svg>
+        </View>
+      ) : (
+        <VerticalLine
+          height={4}
+          width={3}
+        />
+      )}
     </View>
 
     <View name='Event Body'>
