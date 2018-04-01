@@ -12,7 +12,8 @@
     "url": "https://francoischalifour.com"
   },
   "scripts": {
-    "start": "concurrently \"npm run serve\" \"skpm-build --watch --run\"",
+    "start": "concurrently \"yarn serve\" \"yarn render\"",
+    "start:fr": "concurrently \"yarn serve\" \"yarn render:fr\"",
     "serve": "serve images --ignore CREDITS.md -n --port 5000 --silent",
     "build": "skpm-build",
     "watch": "skpm-build --watch",
