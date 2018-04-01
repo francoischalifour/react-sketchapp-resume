@@ -45,9 +45,11 @@ const Repository = ({
     </Text>
 
     <View name='Info' style={styles.info}>
-      <Text name='Language' style={{...typography.Body, ...styles.infoItem}}>
-        <Dot width={20} borderColor={language.color} filled /> {language.name}
-      </Text>
+      <View name='Language Color' style={{paddingTop: 4, paddingRight: 8}}>
+        <Dot width={20} borderColor={language.color} filled />
+      </View>
+
+      <Text style={{...typography.Body, ...styles.infoItem, marginTop: 2}}>{language.name}</Text>
 
       {noStargazers > 0 && <Text name='Stargazers' style={{...typography.Body, ...styles.infoItem}}>
         {`⭑ ${noStargazers}`}
