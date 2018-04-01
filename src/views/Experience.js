@@ -1,12 +1,13 @@
 import React from 'react'
 import { View } from 'react-sketchapp'
-import { MAX_TIMELINE_ITEMS } from '../../config'
+import config from '../../config'
 import headings from '../../data/headings'
 import experienceData from '../../data/experience'
 import { getDataLocale, formatDateInterval, sortByDate } from '../utils'
 import Heading from '../components/Heading'
 import Event from '../components/Event'
 
+const { MAX_TIMELINE_ITEMS } = config
 const heading = getDataLocale(headings.experience)
 const experienceList = getDataLocale(experienceData)
 
