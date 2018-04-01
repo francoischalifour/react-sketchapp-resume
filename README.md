@@ -1,24 +1,24 @@
-# react-sketchapp-resume [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](https://github.com/feross/standard)
+# react-sketchapp-resume
 
 > ⚛️ 💎 My resume built with [React](https://facebook.github.io/react) and rendered to [Sketch](https://www.sketchapp.com/) using [`react-sketchapp`](https://github.com/airbnb/react-sketchapp).
 
-[![Screenshot](https://cloud.githubusercontent.com/assets/6137112/26737756/696019a6-47c3-11e7-8fe5-083948b6fc6b.png)](output/resume.en.pdf)
+[![Screenshot](https://cloud.githubusercontent.com/assets/6137112/26737756/696019a6-47c3-11e7-8fe5-083948b6fc6b.png)](https://resume.francoischalifour.com)
 
 <p align="center">
-  <a href="output/resume.en.pdf">View PDF ouput 🔎</a>
+  <a href="https://resume.francoischalifour.com">View PDF ouput 🔎</a>
 </p>
 
-*Requirements: [Sketch 43+](https://www.sketchapp.com/), [Raleway font family](https://fonts.google.com/specimen/Raleway).*
+_Requirements: [Sketch 43+](https://www.sketchapp.com/), [Raleway font family](https://fonts.google.com/specimen/Raleway)._
 
 ## Features
 
-*  🎂 Dynamic age based on my birthdate
-*  📅 Events sorted in descending chronological order
-*  🎓 Timelines' state updated at every render (circles get filled when a contract with a university or a company is over)
-*  🔢 Retrieve only my last projects and experiences
-*  🔤 Sort items alphabetically
+* 🎂 Dynamic age based on my birthdate
+* 📅 Events sorted in descending chronological order
+* 🎓 Timelines' state updated at every render (circles get filled when a contract with a university or a company is over)
+* 🔢 Retrieve only my last projects and experiences
+* 🔤 Sort items alphabetically
 * :octocat: Fetch my GitHub pinned repositories
-*  🇫🇷 Translate to any language (only French and English are relevant to me)
+* 🇫🇷 Translate to any language (only French and English are relevant to me)
 
 ## Usage
 
@@ -26,7 +26,7 @@
 * Run the images server: `yarn serve`
 * Render to Sketch: `yarn render`
 
-*Alternatively, you can use `yarn start` to serve the images and render.*
+_Alternatively, you can use `yarn start` to serve the images and render._
 
 #### More commands
 
