@@ -23,8 +23,8 @@
     "render:fr": "./scripts/config.sh lang fr && skpm-build --watch --run",
     "render:once": "skpm-build --run",
     "link-plugin": "skpm link",
-    "lint": "standard",
-    "lint:fix": "standard --fix",
+    "lint": "eslint .",
+    "format": "prettier --write '**/*.js'",
     "github:fetch": "node ./scripts/fetch-github > ./data/mocks/github.json",
     "pdf:metadata": "node ./scripts/add-pdf-metadata"
   },
@@ -41,13 +41,17 @@
   },
   "devDependencies": {
     "@skpm/builder": "^0.3.1",
+    "babel-eslint": "^8.2.2",
     "concurrently": "^3.5.0",
     "dist-exiftool": "^10.53.0",
     "dotenv": "^4.0.0",
+    "eslint": "^4.19.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-react": "^7.7.0",
     "node-exiftool": "^2.3.0",
     "node-fetch": "^1.7.3",
+    "prettier": "^1.11.1",
     "prop-types": "^15.5.10",
-    "serve": "^6.1.0",
-    "standard": "^10.0.3"
+    "serve": "^6.1.0"
   }
 }
