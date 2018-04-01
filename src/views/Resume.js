@@ -1,8 +1,8 @@
 import React from 'react'
 import { array } from 'prop-types'
-import { Artboard, View, StyleSheet } from 'react-sketchapp'
+import { Artboard, View } from 'react-sketchapp'
 import { dimensions, spacing, colors } from '../designSystem'
-import { Space } from '../components'
+import Space from '../components/Space'
 import Header from './Header'
 import Footer from './Footer'
 import GitHub from './GitHub'
@@ -11,7 +11,7 @@ import Experience from './Experience'
 import Techs from './Techs'
 import Hobbies from './Hobbies'
 
-const styles = StyleSheet.create({
+const styles = {
   artboard: {
     width: dimensions.docWidth,
     height: dimensions.docHeight,
@@ -19,6 +19,7 @@ const styles = StyleSheet.create({
   },
   columnContainer: {
     flexDirection: 'row',
+    justifyContent: 'space-between',
     paddingTop: spacing.Medium,
     paddingHorizontal: spacing.Large
   },
@@ -26,7 +27,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     flex: 1
   }
-})
+}
 
 const Resume = ({ githubRepos }) => (
   <Artboard name='Resume' style={styles.artboard}>
@@ -38,7 +39,7 @@ const Resume = ({ githubRepos }) => (
     </View>
 
     <View style={styles.columnContainer}>
-      <View style={styles.rowContainer}>
+      <View>
         <Techs />
         <Space height={spacing.Medium} />
         <Hobbies />

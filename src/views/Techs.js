@@ -1,11 +1,11 @@
 import React from 'react'
 import { View } from 'react-sketchapp'
-import { techs as techHeading } from '../../data/headings'
+import headings from '../../data/headings'
 import techData from '../../data/techs'
 import { getDataLocale } from '../utils'
-import { Heading, Tech } from '../components'
-
-const heading = getDataLocale(techHeading)
+import Heading from '../components/Heading'
+import Tech from '../components/Tech'
+const heading = getDataLocale(headings.techs)
 const techList = getDataLocale(techData)
 
 const style = {
@@ -16,7 +16,7 @@ const style = {
 }
 
 const Techs = () => (
-  <View name='Techs' style={{ flex: 1 }}>
+  <View name='Techs'>
     <Heading title={heading} />
 
     <View style={style}>

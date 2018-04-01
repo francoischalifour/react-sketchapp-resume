@@ -1,16 +1,17 @@
 import React from 'react'
 import { View } from 'react-sketchapp'
 import { MAX_TIMELINE_ITEMS } from '../../config'
-import { experience as experienceHeading } from '../../data/headings'
+import headings from '../../data/headings'
 import experienceData from '../../data/experience'
 import { getDataLocale, formatDateInterval, sortByDate } from '../utils'
-import { Heading, Event } from '../components'
+import Heading from '../components/Heading'
+import Event from '../components/Event'
 
-const heading = getDataLocale(experienceHeading)
+const heading = getDataLocale(headings.experience)
 const experienceList = getDataLocale(experienceData)
 
 const Experience = () => (
-  <View name='Experience' style={{ flex: 1 }}>
+  <View name='Experience'>
     <Heading title={heading} />
 
     {experienceList

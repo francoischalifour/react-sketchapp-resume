@@ -1,11 +1,11 @@
 import React from 'react'
 import { string, array, bool } from 'prop-types'
-import { Text, View, StyleSheet } from 'react-sketchapp'
+import { Text, View } from 'react-sketchapp'
 import { spacing, typography, colors } from '../designSystem'
 import VerticalLine from './VerticalLine'
 import Dot from './Dot'
 
-const styles = StyleSheet.create({
+const styles = {
   container: {
     paddingVertical: spacing.Medium,
     paddingHorizontal: spacing.Large
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     height: 116
   }
-})
+}
 
 const Event = ({
   title,
@@ -60,7 +60,7 @@ const Event = ({
         {title}
       </Text>
 
-      <Text name='Event Description' style={[typography.Body, styles.eventDescription]}>
+      <Text name='Event Description' style={{...typography.Body, ...styles.eventDescription}}>
         {description}
       </Text>
     </View>
