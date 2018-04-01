@@ -35,12 +35,12 @@ export const typography = {
   },
   Subtitle: {
     color: '#fff',
-    fontSize: 28,
+    fontSize: 34,
     fontFamily: 'Raleway',
     marginTop: spacing.xSmall
   },
   Heading: {
-    paddingBottom: spacing.Small,
+    paddingBottom: spacing.xSmall,
     color: colors.Gray,
     fontSize: 36,
     fontFamily: 'Raleway SemiBold',
