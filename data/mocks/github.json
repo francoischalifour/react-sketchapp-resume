@@ -6,16 +6,16 @@
           {
             "node": {
               "name": "medium-zoom",
-              "description": "🔎🖼 Medium zoom on your pictures in vanilla JavaScript",
+              "description": "🔎🖼 Medium zoom on your images in vanilla JavaScript",
               "primaryLanguage": {
                 "name": "JavaScript",
                 "color": "#f1e05a"
               },
               "stargazers": {
-                "totalCount": 92
+                "totalCount": 327
               },
               "forks": {
-                "totalCount": 10
+                "totalCount": 21
               }
             }
           },
@@ -28,7 +28,23 @@
                 "color": "#f1e05a"
               },
               "stargazers": {
-                "totalCount": 16
+                "totalCount": 31
+              },
+              "forks": {
+                "totalCount": 2
+              }
+            }
+          },
+          {
+            "node": {
+              "name": "react-metronome",
+              "description": "🥁 React primitives for building metronomes on the web",
+              "primaryLanguage": {
+                "name": "JavaScript",
+                "color": "#f1e05a"
+              },
+              "stargazers": {
+                "totalCount": 1
               },
               "forks": {
                 "totalCount": 0
@@ -44,26 +60,10 @@
                 "color": "#f1e05a"
               },
               "stargazers": {
-                "totalCount": 6
+                "totalCount": 7
               },
               "forks": {
                 "totalCount": 1
-              }
-            }
-          },
-          {
-            "node": {
-              "name": "todo-cli",
-              "description": "✅ Command-line tool to manage Todo lists",
-              "primaryLanguage": {
-                "name": "Python",
-                "color": "#3572A5"
-              },
-              "stargazers": {
-                "totalCount": 6
-              },
-              "forks": {
-                "totalCount": 0
               }
             }
           }

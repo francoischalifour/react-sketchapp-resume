@@ -1,22 +1,22 @@
 export default {
   education: {
     en: 'Education',
-    fr: 'Éducation'
+    fr: 'Éducation',
   },
   experience: {
     en: 'Experience',
-    fr: 'Expérience'
+    fr: 'Expérience',
   },
   github: {
     en: 'GitHub • Pinned repositories',
-    fr: 'GitHub'
+    fr: 'GitHub',
   },
   techs: {
     en: 'Favorite techs',
-    fr: 'Technologies préférées'
+    fr: 'Technologies préférées',
   },
   hobbies: {
     en: 'Hobbies',
-    fr: 'Intérêts'
-  }
+    fr: 'Intérêts',
+  },
 }

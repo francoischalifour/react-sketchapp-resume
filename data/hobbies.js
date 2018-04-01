@@ -2,40 +2,40 @@ export default [
   {
     name: {
       en: 'Coding',
-      fr: 'Code'
+      fr: 'Code',
     },
-    image: 'coding.png'
+    image: 'coding.png',
   },
   {
     name: {
       en: 'Designing',
-      fr: 'Design'
+      fr: 'Design',
     },
-    image: 'paint-palette.png'
+    image: 'paint-palette.png',
   },
   {
     name: {
       en: 'Traveling',
-      fr: 'Voyage'
+      fr: 'Voyage',
     },
-    image: 'palm-tree.png'
+    image: 'palm-tree.png',
   },
   {
     name: 'Saxophone',
-    image: 'saxophone.png'
+    image: 'saxophone.png',
   },
   {
     name: {
       en: 'Guitar',
-      fr: 'Guitare'
+      fr: 'Guitare',
     },
-    image: 'electric-guitar.png'
+    image: 'electric-guitar.png',
   },
   {
     name: {
       en: 'Skateboarding',
-      fr: 'Skateboard'
+      fr: 'Skateboard',
     },
-    image: 'skateboard.png'
-  }
+    image: 'skateboard.png',
+  },
 ]

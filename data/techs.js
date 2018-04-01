@@ -27,5 +27,5 @@ export default [
   'ML',
   'CI',
   'Sketch',
-  'UX'
+  'UX',
 ]
