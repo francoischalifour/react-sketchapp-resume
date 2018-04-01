@@ -1,3 +1,5 @@
+/* eslint no-console: off */
+
 require('dotenv').config()
 const fetch = require('node-fetch')
 
@@ -31,17 +33,17 @@ const query = `query ($login: String!, $first: Int!) {
 
 const variables = {
   login: GITHUB_USERNAME,
-  first: Number(GITHUB_MAX_REPOS)
+  first: Number(GITHUB_MAX_REPOS),
 }
 
 fetch(GITHUB_ENDPOINT, {
   method: 'POST',
   headers: {
-    'Authorization': `Bearer ${GITHUB_TOKEN}`,
-    'Content-Type': 'application/json'
+    Authorization: `Bearer ${GITHUB_TOKEN}`,
+    'Content-Type': 'application/json',
   },
-  body: JSON.stringify({ query, variables })
+  body: JSON.stringify({ query, variables }),
 })
-.then(res => res.json())
-.then(data => JSON.stringify(data, null, 2))
-.then(console.log)
+  .then(res => res.json())
+  .then(data => JSON.stringify(data, null, 2))
+  .then(console.log)

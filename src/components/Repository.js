@@ -11,53 +11,59 @@ const styles = {
     padding: 24,
     borderWidth: 1,
     borderColor: colors.LightGray,
-    borderRadius: 3
+    borderRadius: 3,
   },
   description: {
     paddingTop: spacing.xSmall,
-    color: colors.DarkGray
+    color: colors.DarkGray,
   },
   info: {
     flexDirection: 'row',
-    paddingTop: spacing.xSmall
+    paddingTop: spacing.xSmall,
   },
   infoItem: {
     flexDirection: 'row',
     paddingRight: spacing.Small,
-    color: colors.DarkGray
-  }
+    color: colors.DarkGray,
+  },
 }
 
-const Repository = ({
-  name,
-  description,
-  language,
-  noStargazers,
-  noForks
-}) => (
+const Repository = ({ name, description, language, noStargazers, noForks }) => (
   <View name={name} style={styles.repo}>
-    <Text name='Name' style={typography.Lead}>
+    <Text name="Name" style={typography.Lead}>
       {name}
     </Text>
 
-    <Text name='Description' style={{...typography.Body, ...styles.description}}>
+    <Text
+      name="Description"
+      style={{ ...typography.Body, ...styles.description }}
+    >
       {description}
     </Text>
 
-    <View name='Info' style={styles.info}>
-      <View name='Language Color' style={{paddingTop: 4, paddingRight: 8}}>
+    <View name="Info" style={styles.info}>
+      <View name="Language Color" style={{ paddingTop: 4, paddingRight: 8 }}>
         <Dot width={20} borderColor={language.color} filled />
       </View>
 
-      <Text style={{...typography.Body, ...styles.infoItem, marginTop: 2}}>{language.name}</Text>
+      <Text style={{ ...typography.Body, ...styles.infoItem, marginTop: 2 }}>
+        {language.name}
+      </Text>
 
-      {noStargazers > 0 && <Text name='Stargazers' style={{...typography.Body, ...styles.infoItem}}>
-        {`⭑ ${noStargazers}`}
-      </Text>}
+      {noStargazers > 0 && (
+        <Text
+          name="Stargazers"
+          style={{ ...typography.Body, ...styles.infoItem }}
+        >
+          {`⭑ ${noStargazers}`}
+        </Text>
+      )}
 
-      {noForks > 0 && <Text name='Forks' style={{...typography.Body, ...styles.infoItem}}>
-        {`⑂ ${noForks}`}
-      </Text>}
+      {noForks > 0 && (
+        <Text name="Forks" style={{ ...typography.Body, ...styles.infoItem }}>
+          {`⑂ ${noForks}`}
+        </Text>
+      )}
     </View>
   </View>
 )
@@ -67,10 +73,10 @@ Repository.propTypes = {
   description: string,
   language: shape({
     name: string,
-    color: string
+    color: string,
   }),
   noStargazers: number.isRequired,
-  noForks: number.isRequired
+  noForks: number.isRequired,
 }
 
 export default Repository

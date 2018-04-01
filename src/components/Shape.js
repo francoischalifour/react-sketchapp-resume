@@ -11,16 +11,19 @@ const Shape = ({
   borderWidth = 2,
   borderColor = colors.LightGray,
   backgroundColor,
-  filled
+  filled,
 }) => (
-  <View name={name} style={{
-    width,
-    height,
-    borderRadius,
-    borderWidth,
-    borderColor,
-    backgroundColor: filled ? borderColor : backgroundColor
-  }} />
+  <View
+    name={name}
+    style={{
+      width,
+      height,
+      borderRadius,
+      borderWidth,
+      borderColor,
+      backgroundColor: filled ? borderColor : backgroundColor,
+    }}
+  />
 )
 
 Shape.propTypes = {
@@ -31,7 +34,7 @@ Shape.propTypes = {
   borderWidth: number,
   borderColor: string,
   backgroundColor: string,
-  filled: bool
+  filled: bool,
 }
 
 export default Shape

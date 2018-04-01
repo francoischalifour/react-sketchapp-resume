@@ -15,22 +15,22 @@ const styles = {
   artboard: {
     width: dimensions.docWidth,
     height: dimensions.docHeight,
-    backgroundColor: colors.White
+    backgroundColor: colors.White,
   },
   columnContainer: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     paddingTop: spacing.Medium,
-    paddingHorizontal: spacing.Large
+    paddingHorizontal: spacing.Large,
   },
   rowContainer: {
     flexDirection: 'column',
-    flex: 1
-  }
+    flex: 1,
+  },
 }
 
 const Resume = ({ githubRepos }) => (
-  <Artboard name='Resume' style={styles.artboard}>
+  <Artboard name="Resume" style={styles.artboard}>
     <Header />
 
     <View style={styles.columnContainer}>
@@ -53,7 +53,7 @@ const Resume = ({ githubRepos }) => (
 )
 
 Resume.propTypes = {
-  githubRepos: array.isRequired
+  githubRepos: array.isRequired,
 }
 
 export default Resume

@@ -9,12 +9,12 @@ export const colors = {
   Primary: '#10649B',
   PrimaryLight: '#1CB5E0',
   PrimaryDark: '#000046',
-  Error: '#F44336'
+  Error: '#F44336',
 }
 
 export const dimensions = {
   docWidth: 1654,
-  docHeight: 2339
+  docHeight: 2339,
 }
 
 export const spacing = {
@@ -22,7 +22,7 @@ export const spacing = {
   Small: 8 * 4,
   Medium: 16 * 4,
   Large: 32 * 4,
-  xLarge: 64 * 4
+  xLarge: 64 * 4,
 }
 
 export const typography = {
@@ -31,44 +31,44 @@ export const typography = {
     fontSize: 64,
     fontFamily: 'Raleway',
     marginTop: spacing.Medium,
-    lineHeight: 64
+    lineHeight: 64,
   },
   Subtitle: {
     color: '#fff',
     fontSize: 34,
     fontFamily: 'Raleway',
-    marginTop: spacing.xSmall
+    marginTop: spacing.xSmall,
   },
   Heading: {
     paddingBottom: spacing.xSmall,
     color: colors.Gray,
     fontSize: 36,
     fontFamily: 'Raleway SemiBold',
-    textTransform: 'uppercase'
+    textTransform: 'uppercase',
   },
   Lead: {
     fontSize: 20,
     letterSpacing: 0.5,
-    fontFamily: 'Raleway SemiBold'
+    fontFamily: 'Raleway SemiBold',
   },
   Body: {
     fontSize: 20,
-    fontFamily: 'Raleway'
+    fontFamily: 'Raleway',
   },
   Small: {
     color: colors.Gray,
     fontSize: 14,
-    fontFamily: 'Raleway'
+    fontFamily: 'Raleway',
   },
   Code: {
     fontSize: 20,
-    fontFamily: 'Monaco'
-  }
+    fontFamily: 'Monaco',
+  },
 }
 
 export default {
   dimensions,
   typography,
   spacing,
-  colors
+  colors,
 }

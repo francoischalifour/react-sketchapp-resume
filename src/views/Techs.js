@@ -12,20 +12,17 @@ const style = {
   flexDirection: 'row',
   flexWrap: 'wrap',
   width: 600,
-  maxHeight: 355
+  maxHeight: 355,
 }
 
 const Techs = () => (
-  <View name='Techs'>
+  <View name="Techs">
     <Heading title={heading} />
 
     <View style={style}>
-      {techList.sort().map((techName, index) =>
-        <Tech
-          key={index}
-          name={techName}
-        />
-      )}
+      {techList
+        .sort()
+        .map((techName, index) => <Tech key={index} name={techName} />)}
     </View>
   </View>
 )

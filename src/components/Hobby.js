@@ -7,35 +7,30 @@ const styles = {
   hobby: {
     justifyContent: 'center',
     marginBottom: spacing.Small,
-    width: 151
+    width: 151,
   },
   image: {
     alignSelf: 'center',
     width: 100,
-    height: 100
+    height: 100,
   },
   name: {
     marginTop: spacing.xSmall,
-    textAlign: 'center'
-  }
+    textAlign: 'center',
+  },
 }
 
 const Hobby = ({ name, image }) => (
   <View name={name} style={styles.hobby}>
-    <Image
-      source={image}
-      style={styles.image}
-    />
+    <Image source={image} style={styles.image} />
 
-    <Text style={{...typography.Lead, ...styles.name}}>
-      {name}
-    </Text>
+    <Text style={{ ...typography.Lead, ...styles.name }}>{name}</Text>
   </View>
 )
 
 Hobby.propTypes = {
   name: string.isRequired,
-  image: string.isRequired
+  image: string.isRequired,
 }
 
 export default Hobby

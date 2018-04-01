@@ -12,37 +12,48 @@ const heading = getDataLocale(headings.experience)
 const experienceList = getDataLocale(experienceData)
 
 const Experience = () => (
-  <View name='Experience'>
+  <View name="Experience">
     <Heading title={heading} />
 
     {experienceList
-    .sort(sortByDate)
-    .slice(0, MAX_TIMELINE_ITEMS)
-    .map(({ name, description, role, contract, location, started_at: start, ended_at: end }, index) => {
-      const currentDate = new Date()
-      const startDate = new Date(start)
-      const endDate = new Date(end)
-      const dateInterval = formatDateInterval(startDate.getFullYear(), endDate.getFullYear())
+      .sort(sortByDate)
+      .slice(0, MAX_TIMELINE_ITEMS)
+      .map(
+        (
+          {
+            name,
+            description,
+            role,
+            contract,
+            location,
+            started_at: start,
+            ended_at: end,
+          },
+          index
+        ) => {
+          const currentDate = new Date()
+          const startDate = new Date(start)
+          const endDate = new Date(end)
+          const dateInterval = formatDateInterval(
+            startDate.getFullYear(),
+            endDate.getFullYear()
+          )
 
-      const info = [
-        role,
-        contract,
-        location,
-        dateInterval
-      ].filter(x => x)
+          const info = [role, contract, location, dateInterval].filter(x => x)
 
-      return (
-        <Event
-          key={index}
-          title={name}
-          info={info}
-          description={description}
-          done={endDate < currentDate}
-          isFirst={index === 0}
-          isLast={index === (MAX_TIMELINE_ITEMS - 1)}
-        />
-      )
-    })}
+          return (
+            <Event
+              key={index}
+              title={name}
+              info={info}
+              description={description}
+              done={endDate < currentDate}
+              isFirst={index === 0}
+              isLast={index === MAX_TIMELINE_ITEMS - 1}
+            />
+          )
+        }
+      )}
   </View>
 )
 

@@ -14,21 +14,21 @@ const style = {
   flexDirection: 'row',
   flexWrap: 'wrap',
   justifyContent: 'space-between',
-  width: 600
+  width: 600,
 }
 
 const Hobbies = () => (
-  <View name='Hobbies'>
+  <View name="Hobbies">
     <Heading title={heading} />
 
     <View style={style}>
-      {hobbyList.map((hobby, index) =>
+      {hobbyList.map((hobby, index) => (
         <Hobby
           key={index}
           name={hobby.name}
           image={`${IMG_ENDPOINT}${hobby.image}`}
         />
-      )}
+      ))}
     </View>
   </View>
 )

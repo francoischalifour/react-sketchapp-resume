@@ -14,7 +14,7 @@ const styles = {
     alignItems: 'center',
     textAlign: 'center',
     padding: spacing.Medium,
-    backgroundColor: colors.Primary
+    backgroundColor: colors.Primary,
   },
   info: {
     lineHeight: 20,
@@ -26,19 +26,20 @@ const styles = {
     shadowRadius: 8,
     shadowOffset: {
       width: 0,
-      height: 4
-    }
-  }
+      height: 4,
+    },
+  },
 }
 
 const Footer = () => (
-  <View name='Footer' style={styles.container}>
-
+  <View name="Footer" style={styles.container}>
     <View style={styles.info}>
-      <Text style={{
-        ...typography.Lead,
-        color: colors.Primary
-      }}>
+      <Text
+        style={{
+          ...typography.Lead,
+          color: colors.Primary,
+        }}
+      >
         {about.website}
       </Text>
     </View>
@@ -49,13 +50,16 @@ const Footer = () => (
       viewBox={`0 0 1 200`}
       style={{
         position: 'absolute',
-        bottom: 0
+        bottom: 0,
       }}
-      >
+    >
       <Svg.Defs>
-        <Svg.LinearGradient id='gradient'>
-          <Svg.Stop offset='0%' style={`stop-color: ${colors.PrimaryDark};`} />
-          <Svg.Stop offset='100%' style={`stop-color: ${colors.PrimaryLight};`} />
+        <Svg.LinearGradient id="gradient">
+          <Svg.Stop offset="0%" style={`stop-color: ${colors.PrimaryDark};`} />
+          <Svg.Stop
+            offset="100%"
+            style={`stop-color: ${colors.PrimaryLight};`}
+          />
         </Svg.LinearGradient>
       </Svg.Defs>
       <Svg.G>

@@ -10,19 +10,19 @@ const style = {
   paddingVertical: 12,
 
   backgroundColor: colors.LightBlue,
-  borderRadius: 3
+  borderRadius: 3,
 }
 
 const Tech = ({ name }) => (
   <View style={style}>
-    <Text style={{color: colors.PrimaryLight, ...typography.Body}}>
+    <Text style={{ color: colors.PrimaryLight, ...typography.Body }}>
       {name.toLowerCase()}
     </Text>
   </View>
 )
 
 Tech.propTypes = {
-  name: string.isRequired
+  name: string.isRequired,
 }
 
 export default Tech
