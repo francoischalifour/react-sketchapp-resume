@@ -29,6 +29,7 @@ export const typography = {
   Title: {
     color: '#fff',
     fontSize: 64,
+    fontWeight: 500,
     fontFamily: 'Raleway',
     marginTop: spacing.Medium,
     lineHeight: 64,
