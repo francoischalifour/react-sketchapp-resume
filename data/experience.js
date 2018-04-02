@@ -92,7 +92,8 @@ export default [
       fr: 'Stage',
     },
     description: {
-      en: 'Working on making InstantSearch libraries work with any backend.',
+      en:
+        'Working on making InstantSearch libraries compatible with any backend.',
       fr:
         "Je travaille sur les librairies InstantSearch pour les rendre compatibles avec n'importe quel backend.",
     },
