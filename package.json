@@ -15,7 +15,7 @@
     "start": "concurrently \"yarn serve\" \"yarn render\"",
     "start:fr": "concurrently \"yarn serve\" \"yarn render:fr\"",
     "serve": "serve images --ignore CREDITS.md -n --port 5000 --silent",
-    "build": "skpm-build",
+    "build": "concurrently \"yarn serve\" \"yarn github:fetch && skpm-build --run\"",
     "watch": "skpm-build --watch",
     "render": "skpm-build --watch --run",
     "render:mock": "./scripts/config.sh env mock && skpm-build --watch --run",
