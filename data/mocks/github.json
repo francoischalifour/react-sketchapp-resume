@@ -6,29 +6,31 @@
           {
             "node": {
               "name": "medium-zoom",
+              "nameWithOwner": "francoischalifour/medium-zoom",
               "description": "🔎🖼 Medium zoom on your images in vanilla JavaScript",
               "primaryLanguage": {
                 "name": "JavaScript",
                 "color": "#f1e05a"
               },
               "stargazers": {
-                "totalCount": 328
+                "totalCount": 430
               },
               "forks": {
-                "totalCount": 21
+                "totalCount": 25
               }
             }
           },
           {
             "node": {
               "name": "react-sketchapp-resume",
+              "nameWithOwner": "francoischalifour/react-sketchapp-resume",
               "description": "⚛️ 💎 My resume built with React and rendered to Sketch",
               "primaryLanguage": {
                 "name": "JavaScript",
                 "color": "#f1e05a"
               },
               "stargazers": {
-                "totalCount": 31
+                "totalCount": 35
               },
               "forks": {
                 "totalCount": 2
@@ -37,33 +39,33 @@
           },
           {
             "node": {
-              "name": "react-metronome",
-              "description": "🥁 React primitives for building metronomes on the web",
+              "name": "algolia/instantsearch.js",
+              "description": "⚡️ Lightning-fast search for your apps, by Algolia",
               "primaryLanguage": {
                 "name": "JavaScript",
                 "color": "#f1e05a"
               },
               "stargazers": {
-                "totalCount": 1
+                "totalCount": 2014
               },
               "forks": {
-                "totalCount": 0
+                "totalCount": 273
               }
             }
           },
           {
             "node": {
-              "name": "musicscore-creator",
-              "description": "🎼 Musical web app for editing, visualizing and transposing music sheets",
+              "name": "algolia/create-instantsearch-app",
+              "description": "⚡️ Build InstantSearch apps at the speed of thoughts",
               "primaryLanguage": {
                 "name": "JavaScript",
                 "color": "#f1e05a"
               },
               "stargazers": {
-                "totalCount": 7
+                "totalCount": 9
               },
               "forks": {
-                "totalCount": 1
+                "totalCount": 0
               }
             }
           }
