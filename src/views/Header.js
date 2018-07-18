@@ -51,6 +51,28 @@ const age = `${getAge(birthdate)} ${birthdateText}`
 
 const Header = () => (
   <View name="Header" style={styles.container}>
+    <Svg
+      width={dimensions.docWidth}
+      height={490}
+      style={{
+        position: 'absolute',
+        top: 0,
+      }}
+    >
+      <Svg.Defs>
+        <Svg.LinearGradient id="gradient">
+          <Svg.Stop offset="0%" style={`stop-color: ${colors.PrimaryDark};`} />
+          <Svg.Stop
+            offset="100%"
+            style={`stop-color: ${colors.PrimaryLight};`}
+          />
+        </Svg.LinearGradient>
+      </Svg.Defs>
+      <Svg.G>
+        <Svg.Path fill={'url(#gradient)'} d={`M0 0 L0 520 1 480 1 0 0 0`} />
+      </Svg.G>
+    </Svg>
+
     <View name="Left Panel">
       <View name="Twitter" style={styles.iconContainer}>
         <TwitterSvg />
@@ -80,28 +102,6 @@ const Header = () => (
         </Text>
       ))}
     </View>
-
-    <Svg
-      width={dimensions.docWidth}
-      height={490}
-      style={{
-        position: 'absolute',
-        top: 0,
-      }}
-    >
-      <Svg.Defs>
-        <Svg.LinearGradient id="gradient">
-          <Svg.Stop offset="0%" style={`stop-color: ${colors.PrimaryDark};`} />
-          <Svg.Stop
-            offset="100%"
-            style={`stop-color: ${colors.PrimaryLight};`}
-          />
-        </Svg.LinearGradient>
-      </Svg.Defs>
-      <Svg.G>
-        <Svg.Path fill={'url(#gradient)'} d={`M0 0 L0 520 1 480 1 0 0 0`} />
-      </Svg.G>
-    </Svg>
   </View>
 )
 

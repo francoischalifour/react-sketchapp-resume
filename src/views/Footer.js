@@ -33,17 +33,6 @@ const styles = {
 
 const Footer = () => (
   <View name="Footer" style={styles.container}>
-    <View style={styles.info}>
-      <Text
-        style={{
-          ...typography.Lead,
-          color: colors.Primary,
-        }}
-      >
-        {about.website}
-      </Text>
-    </View>
-
     <Svg
       width={dimensions.docWidth}
       height={200}
@@ -69,6 +58,17 @@ const Footer = () => (
         />
       </Svg.G>
     </Svg>
+
+    <View style={styles.info}>
+      <Text
+        style={{
+          ...typography.Lead,
+          color: colors.Primary,
+        }}
+      >
+        {about.website}
+      </Text>
+    </View>
   </View>
 )
 
