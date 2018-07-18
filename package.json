@@ -14,7 +14,7 @@
   "scripts": {
     "start": "concurrently \"yarn serve\" \"yarn render\"",
     "start:fr": "concurrently \"yarn serve\" \"yarn render:fr\"",
-    "serve": "serve images --ignore CREDITS.md -n --port 5000 --silent",
+    "serve": "serve images --listen 5000",
     "build": "concurrently \"yarn serve\" \"yarn github:fetch && skpm-build --run\"",
     "watch": "skpm-build --watch",
     "render": "skpm-build --watch --run",
@@ -35,24 +35,24 @@
     ]
   },
   "dependencies": {
-    "react": "^15.6.1",
-    "react-sketchapp": "^1.0.0",
-    "react-test-renderer": "^15.6.1",
-    "sketch-module-fetch-polyfill": "^0.1.4"
+    "react": "16.4.1",
+    "react-sketchapp": "2.0.0",
+    "react-test-renderer": "16.4.1",
+    "sketch-module-fetch-polyfill": "0.1.4"
   },
   "devDependencies": {
-    "@skpm/builder": "^0.3.1",
-    "babel-eslint": "^8.2.2",
-    "concurrently": "^3.5.0",
-    "dist-exiftool": "^10.53.0",
-    "dotenv": "^4.0.0",
-    "eslint": "^4.19.1",
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-react": "^7.7.0",
-    "node-exiftool": "^2.3.0",
-    "node-fetch": "^1.7.3",
-    "prettier": "^1.11.1",
-    "prop-types": "^15.5.10",
-    "serve": "^6.1.0"
+    "@skpm/builder": "0.4.3",
+    "babel-eslint": "8.2.6",
+    "concurrently": "3.6.0",
+    "dist-exiftool": "10.53.0",
+    "dotenv": "6.0.0",
+    "eslint": "5.1.0",
+    "eslint-config-prettier": "2.9.0",
+    "eslint-plugin-react": "7.10.0",
+    "node-exiftool": "2.3.0",
+    "node-fetch": "2.1.2",
+    "prettier": "1.13.7",
+    "prop-types": "15.6.2",
+    "serve": "7.2.0"
   }
 }
