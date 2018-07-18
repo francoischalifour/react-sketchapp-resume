@@ -14,12 +14,12 @@ const styles = {
     borderRadius: 3,
   },
   description: {
-    paddingTop: spacing.xSmall,
+    marginTop: spacing.xSmall,
     color: colors.DarkGray,
   },
   info: {
     flexDirection: 'row',
-    paddingTop: spacing.xSmall,
+    marginTop: spacing.xSmall,
   },
   infoItem: {
     flexDirection: 'row',
