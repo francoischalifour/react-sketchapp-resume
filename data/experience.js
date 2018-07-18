@@ -87,10 +87,6 @@ export default [
       en: 'Software Engineer',
       fr: 'Ingénieur Logiciel',
     },
-    contract: {
-      en: 'Internship',
-      fr: 'Stage',
-    },
     description: {
       en:
         'Working on making InstantSearch libraries compatible with any backend.',
@@ -99,6 +95,5 @@ export default [
     },
     location: 'Paris, France',
     started_at: '2018-01-22',
-    ended_at: '2018-08-13',
   },
 ]
