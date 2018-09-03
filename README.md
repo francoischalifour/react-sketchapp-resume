@@ -39,7 +39,7 @@ By default, the resume is in `mock` environment (doesn't pull real data from Git
 
 #### Production environment
 
-* [Create an OAuth token](https://developer.github.com/early-access/graphql/guides/accessing-graphql) to get access to the GitHub GraphQL API (only `public_repo` scope is required)
+* [Create an OAuth token](https://developer.github.com/v4/guides/forming-calls/#authenticating-with-graphql) to get access to the GitHub GraphQL API (only `public_repo` scope is required)
 * Option 1:
   * Add your newly generated token in [`config/.config.github.js`](config/.config.github.js)
   * Change the environment config variable in [`config/.config.env.js`](config/.config.env.js) to anything but `mock` (e.g. `production`)
@@ -63,7 +63,7 @@ Everything is rendered with React, except gradients and skew lines shown on the 
 
 The main reason I have never kept my resume updated is that the workflow was terrible. I will now only need to update the data and render in any language.
 
-I was quite bored with "static" resumes and thought it was a good opportunity to display some real data in there. I used the [GitHub GraphQL API](https://developer.github.com/early-access/graphql) to fetch my pinned repositories and inject them into Sketch.
+I was quite bored with "static" resumes and thought it was a good opportunity to display some real data in there. I used the [GitHub GraphQL API](https://developer.github.com/v4/) to fetch my pinned repositories and inject them into Sketch.
 
 I'm more a developer than a designer, eh.
 
