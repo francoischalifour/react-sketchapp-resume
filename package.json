@@ -12,10 +12,10 @@
     "url": "https://francoischalifour.com"
   },
   "scripts": {
-    "start": "concurrently \"yarn serve\" \"yarn render\"",
-    "start:fr": "concurrently \"yarn serve\" \"yarn render:fr\"",
+    "start": "yarn serve & yarn render",
+    "start:fr": "yarn serve & yarn render:fr",
     "serve": "serve images --listen 5000",
-    "build": "concurrently \"yarn serve\" \"yarn github:fetch && skpm-build --run\"",
+    "build": "yarn serve & yarn github:fetch && skpm-build --run",
     "watch": "skpm-build --watch",
     "render": "skpm-build --watch --run",
     "render:mock": "./scripts/config.sh env mock && skpm-build --watch --run",
@@ -35,24 +35,23 @@
     ]
   },
   "dependencies": {
-    "react": "16.4.1",
-    "react-sketchapp": "2.0.0",
-    "react-test-renderer": "16.4.1",
+    "react": "16.8.6",
+    "react-sketchapp": "2.1.0",
+    "react-test-renderer": "16.8.6",
     "sketch-module-fetch-polyfill": "0.1.4"
   },
   "devDependencies": {
     "@skpm/builder": "0.4.3",
-    "babel-eslint": "8.2.6",
-    "concurrently": "3.6.0",
+    "babel-eslint": "10.0.2",
     "dist-exiftool": "10.53.0",
-    "dotenv": "6.0.0",
-    "eslint": "5.1.0",
-    "eslint-config-prettier": "2.9.0",
-    "eslint-plugin-react": "7.10.0",
+    "dotenv": "8.0.0",
+    "eslint": "6.0.1",
+    "eslint-config-prettier": "6.0.0",
+    "eslint-plugin-react": "7.14.2",
     "node-exiftool": "2.3.0",
-    "node-fetch": "2.1.2",
-    "prettier": "1.13.7",
-    "prop-types": "15.6.2",
-    "serve": "7.2.0"
+    "node-fetch": "2.6.0",
+    "prettier": "1.18.2",
+    "prop-types": "15.7.2",
+    "serve": "11.0.2"
   }
 }

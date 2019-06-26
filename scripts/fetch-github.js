@@ -1,5 +1,3 @@
-/* eslint no-console: off */
-
 require('dotenv').config()
 const fetch = require('node-fetch')
 
@@ -13,6 +11,10 @@ const query = `query ($login: String!, $first: Int!) {
         edges {
           node {
             name
+            nameWithOwner
+            owner {
+              login
+            }
             description
             primaryLanguage {
               name

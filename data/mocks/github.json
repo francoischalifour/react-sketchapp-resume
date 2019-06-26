@@ -7,16 +7,19 @@
             "node": {
               "name": "medium-zoom",
               "nameWithOwner": "francoischalifour/medium-zoom",
-              "description": "🔎🖼 Medium zoom on your images in vanilla JavaScript",
+              "owner": {
+                "login": "francoischalifour"
+              },
+              "description": "🔎🖼 A JavaScript library for zooming images like Medium",
               "primaryLanguage": {
                 "name": "JavaScript",
                 "color": "#f1e05a"
               },
               "stargazers": {
-                "totalCount": 430
+                "totalCount": 1755
               },
               "forks": {
-                "totalCount": 25
+                "totalCount": 62
               }
             }
           },
@@ -24,48 +27,59 @@
             "node": {
               "name": "react-sketchapp-resume",
               "nameWithOwner": "francoischalifour/react-sketchapp-resume",
+              "owner": {
+                "login": "francoischalifour"
+              },
               "description": "⚛️ 💎 My resume built with React and rendered to Sketch",
               "primaryLanguage": {
                 "name": "JavaScript",
                 "color": "#f1e05a"
               },
               "stargazers": {
-                "totalCount": 35
+                "totalCount": 50
               },
               "forks": {
-                "totalCount": 2
+                "totalCount": 5
               }
             }
           },
           {
             "node": {
-              "name": "algolia/instantsearch.js",
-              "description": "⚡️ Lightning-fast search for your apps, by Algolia",
+              "name": "instantsearch.js",
+              "nameWithOwner": "algolia/instantsearch.js",
+              "owner": {
+                "login": "algolia"
+              },
+              "description": "⚡️ A JavaScript library for building performant and instant search experiences with Algolia.",
               "primaryLanguage": {
                 "name": "JavaScript",
                 "color": "#f1e05a"
               },
               "stargazers": {
-                "totalCount": 2014
+                "totalCount": 2302
               },
               "forks": {
-                "totalCount": 273
+                "totalCount": 314
               }
             }
           },
           {
             "node": {
-              "name": "algolia/create-instantsearch-app",
-              "description": "⚡️ Build InstantSearch apps at the speed of thoughts",
+              "name": "create-instantsearch-app",
+              "nameWithOwner": "algolia/create-instantsearch-app",
+              "owner": {
+                "login": "algolia"
+              },
+              "description": "⚡️ Build InstantSearch apps at the speed of thought",
               "primaryLanguage": {
                 "name": "JavaScript",
                 "color": "#f1e05a"
               },
               "stargazers": {
-                "totalCount": 9
+                "totalCount": 40
               },
               "forks": {
-                "totalCount": 0
+                "totalCount": 4
               }
             }
           }

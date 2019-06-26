@@ -1,6 +1,7 @@
 import fetch from 'sketch-module-fetch-polyfill'
 import config from '../../config'
 import about from '../../data/about'
+
 const { github: username } = about.social
 const { __ENV__, GITHUB_TOKEN, MAX_GITHUB_REPOS, GITHUB_ENDPOINT } = config
 const QUERY = `query ($login: String = "${username}", $first: Int = ${MAX_GITHUB_REPOS}) {
@@ -10,6 +11,10 @@ const QUERY = `query ($login: String = "${username}", $first: Int = ${MAX_GITHUB
         edges {
           node {
             name
+            nameWithOwner
+            owner {
+              login
+            }
             description
             primaryLanguage {
               name
@@ -46,6 +51,11 @@ export const getRepos = () => {
     .then(data => data.repositoryOwner)
     .then(owner => owner.pinnedRepositories)
     .then(repos => repos.edges)
-    .then(edges => edges.map(e => e.node))
+    .then(edges =>
+      edges.map(e => e.node).map(e => ({
+        ...e,
+        displayName: username === e.owner.login ? e.name : e.nameWithOwner,
+      }))
+    )
     .catch(err => err.message)
 }
