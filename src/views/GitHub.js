@@ -30,7 +30,7 @@ const GitHub = ({ repos }) => (
         repos.map((repo, index) => (
           <Repository
             key={index}
-            name={repo.name}
+            name={repo.displayName}
             description={repo.description}
             language={repo.primaryLanguage}
             noStargazers={repo.stargazers.totalCount}
