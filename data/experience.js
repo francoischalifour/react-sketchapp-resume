@@ -84,14 +84,14 @@ export default [
   {
     name: 'Algolia',
     role: {
-      en: 'Software Engineer',
-      fr: 'Ingénieur Logiciel',
+      en: 'Senior Software Engineer',
+      fr: 'Senior Software Engineer',
     },
     description: {
       en:
-        'Working on making InstantSearch libraries compatible with any backend.',
+        'Working on the open source frontend stack (Autocomplete, InstantSearch, DocSearch, Recommend).',
       fr:
-        "Je travaille sur les librairies InstantSearch pour les rendre compatibles avec n'importe quel backend.",
+        'Je travaille sur la stack frontend open source (Autocomplete, InstantSearch, DocSearch, Recommend).',
     },
     location: 'Paris, France',
     started_at: '2018-01-22',
