@@ -5,27 +5,25 @@ import about from '../../data/about'
 const { github: username } = about.social
 const { __ENV__, GITHUB_TOKEN, MAX_GITHUB_REPOS, GITHUB_ENDPOINT } = config
 const QUERY = `query ($login: String = "${username}", $first: Int = ${MAX_GITHUB_REPOS}) {
-  repositoryOwner(login: $login) {
-    ... on User {
-      pinnedRepositories(first: $first) {
-        edges {
-          node {
+  user(login: $login) {
+    pinnedItems(first: $first, types: REPOSITORY) {
+      nodes {
+        ... on Repository {
+          name
+          nameWithOwner
+          owner {
+            login
+          }
+          description
+          primaryLanguage {
             name
-            nameWithOwner
-            owner {
-              login
-            }
-            description
-            primaryLanguage {
-              name
-              color
-            }
-            stargazers {
-              totalCount
-            }
-            forks {
-              totalCount
-            }
+            color
+          }
+          stargazers {
+            totalCount
+          }
+          forks {
+            totalCount
           }
         }
       }
@@ -47,14 +45,12 @@ export const getRepos = () => {
         }.then(res => res.json()),
       })
   )
-    .then(json => json.data)
-    .then(data => data.repositoryOwner)
-    .then(owner => owner.pinnedRepositories)
-    .then(repos => repos.edges)
-    .then(edges =>
-      edges.map(e => e.node).map(e => ({
-        ...e,
-        displayName: username === e.owner.login ? e.name : e.nameWithOwner,
+    .then(json => json.data.user.pinnedItems.nodes)
+    .then(repos =>
+      repos.map(repo => ({
+        ...repo,
+        displayName:
+          username === repo.owner.login ? repo.name : repo.nameWithOwner,
       }))
     )
     .catch(err => err.message)

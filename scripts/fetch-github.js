@@ -5,27 +5,25 @@ const { GITHUB_TOKEN, GITHUB_USERNAME, GITHUB_MAX_REPOS } = process.env
 const GITHUB_ENDPOINT = 'https://api.github.com/graphql'
 
 const query = `query ($login: String!, $first: Int!) {
-  repositoryOwner(login: $login) {
-    ... on User {
-      pinnedRepositories(first: $first) {
-        edges {
-          node {
+  user(login: $login) {
+    pinnedItems(first: $first, types: REPOSITORY) {
+      nodes {
+        ... on Repository {
+          name
+          nameWithOwner
+          owner {
+            login
+          }
+          description
+          primaryLanguage {
             name
-            nameWithOwner
-            owner {
-              login
-            }
-            description
-            primaryLanguage {
-              name
-              color
-            }
-            stargazers {
-              totalCount
-            }
-            forks {
-              totalCount
-            }
+            color
+          }
+          stargazers {
+            totalCount
+          }
+          forks {
+            totalCount
           }
         }
       }
