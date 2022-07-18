@@ -1,8 +1,8 @@
 export default {
   name: 'François Chalifour',
   description: {
-    en: 'Software Engineer at Algolia',
-    fr: 'Software Engineer à Algolia',
+    en: 'Senior Software Engineer at Algolia',
+    fr: 'Senior Software Engineer à Algolia',
   },
   birthdate: '1995-06-18',
   birthdate_text: {
